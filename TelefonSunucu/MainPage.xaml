@@ -25,7 +25,6 @@
                 <Frame CornerRadius="20" Padding="20" BackgroundColor="#2C2C2E" BorderColor="Transparent">
                     <VerticalStackLayout Spacing="10">
                         <Label Text="Kayıtlı Cihazlar" FontSize="18" FontAttributes="Bold" TextColor="White"/>
-                        <!-- YENİ: SelectionMode ve SelectionChanged eklendi -->
                         <CollectionView x:Name="PairedDevicesCollectionView" 
                                         HeightRequest="100"
                                         SelectionMode="Single"
@@ -39,7 +38,6 @@
                                 <Label Text="Henüz kayıtlı cihaz yok." TextColor="#8E8E93" HorizontalOptions="Center" VerticalOptions="Center"/>
                             </CollectionView.EmptyView>
                         </CollectionView>
-                        <!-- YENİ: Kayıtlı cihaza bağlanma butonu -->
                         <Button x:Name="ConnectToPairedDeviceButton" 
                                 Text="Seçili Cihaza Bağlanma İsteği Gönder" 
                                 IsEnabled="False"

@@ -18,7 +18,7 @@ namespace PCIstemci
         public string Name { get; set; }
         public string IpAddress { get; set; }
         public string Pin { get; set; }
-        // DÜZELTME: Telefonun kimliğini tutmak için PhoneId eklendi.
+        
         public string PhoneId { get; set; }
     }
 
@@ -39,7 +39,7 @@ namespace PCIstemci
         private readonly string _pairedDevicesFilePath;
         public string StartupMessage { get; set; }
 
-        // DÜZELTME: UdpClient, pencere kapatıldığında erişilebilmesi için bir üye değişken yapıldı.
+        
         private UdpClient _udpClient;
 
         public MainWindow()
@@ -68,7 +68,7 @@ namespace PCIstemci
                     Log(StartupMessage);
                 }
             };
-            // DÜZELTME: Pencere kapandığında UDP dinleyicisini güvenli bir şekilde durdurur.
+            
             this.Closing += MainWindow_Closing;
         }
 
@@ -82,7 +82,7 @@ namespace PCIstemci
         {
             Task.Run(() =>
             {
-                // DÜZELTME: 'using' bloğu kaldırıldı, _udpClient üye değişkeni kullanılıyor.
+                
                 _udpClient = new UdpClient(UdpPort);
                 Log("Cihaz keşfi için UDP dinleyicisi başlatıldı.");
                 IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
@@ -97,7 +97,7 @@ namespace PCIstemci
 
                         Dispatcher.Invoke(() =>
                         {
-                            // DÜZELTME: Mobil uygulamadan gelen 5 parçalı mesaj formatı doğru işleniyor.
+                            
                             if (parts.Length == 5 && parts[0] == "DEVICE_ANNOUNCE")
                             {
                                 var device = new DiscoveredDevice { Name = parts[1], IpAddress = parts[2], Pin = parts[3], PhoneId = parts[4] };
@@ -111,8 +111,6 @@ namespace PCIstemci
                     }
                     catch (SocketException)
                     {
-                        // _udpClient.Close() çağrıldığında bu hata fırlatılır.
-                        // Bu beklenen bir durumdur, döngüden çıkmak için kullanılır.
                         break;
                     }
                     catch (Exception ex)

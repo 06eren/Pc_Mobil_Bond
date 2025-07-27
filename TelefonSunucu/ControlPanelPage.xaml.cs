@@ -29,8 +29,6 @@ namespace TelefonSunucu
                 connectedLabel.Text = $"Baðlý Cihaz: {pcName}";
             }
 
-            // DÜZELTME: Hatalara neden olan ve kaydýrma özelliðini
-            // devre dýþý býrakan blok geçici olarak kaldýrýldý.
         }
 
         protected override void OnAppearing()

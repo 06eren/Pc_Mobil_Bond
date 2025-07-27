@@ -9,7 +9,6 @@
         WindowStartupLocation="CenterScreen"
         Background="#1C1C1E">
     <Window.Resources>
-        <!-- Modern Buton Stili -->
         <Style TargetType="Button">
             <Setter Property="Background" Value="#0A84FF"/>
             <Setter Property="Foreground" Value="White"/>
@@ -33,7 +32,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!-- Modern Metin Kutusu Stili -->
         <Style TargetType="TextBox">
             <Setter Property="Background" Value="#2C2C2E"/>
             <Setter Property="Foreground" Value="White"/>
@@ -43,7 +41,6 @@
             <Setter Property="CaretBrush" Value="White"/>
             <Setter Property="FontSize" Value="14"/>
         </Style>
-        <!-- Modern Şifre Kutusu Stili -->
         <Style TargetType="PasswordBox">
             <Setter Property="Background" Value="#2C2C2E"/>
             <Setter Property="Foreground" Value="White"/>
@@ -53,11 +50,9 @@
             <Setter Property="CaretBrush" Value="White"/>
             <Setter Property="FontSize" Value="14"/>
         </Style>
-        <!-- Modern Etiket Stili -->
         <Style TargetType="Label">
             <Setter Property="Foreground" Value="#AEAEB2"/>
         </Style>
-        <!-- Modern Grup Kutusu Stili -->
         <Style TargetType="GroupBox">
             <Setter Property="Foreground" Value="#0A84FF"/>
             <Setter Property="BorderBrush" Value="#3A3A3C"/>
@@ -65,7 +60,6 @@
             <Setter Property="Padding" Value="10"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
-        <!-- Modern Liste Elemanı Stili -->
         <Style x:Key="ModernListViewItemStyle" TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
             <Setter Property="Margin" Value="0,0,0,5"/>
@@ -95,7 +89,7 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sol Panel: Cihaz Listeleri -->
+
         <Grid Grid.Column="0" Margin="0,0,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -130,7 +124,7 @@
             </ListView>
         </Grid>
 
-        <!-- Sağ Panel: Bağlantı ve Loglar -->
+
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

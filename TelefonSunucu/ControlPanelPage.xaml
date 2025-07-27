@@ -7,7 +7,7 @@
             SelectedTabColor="#0A84FF"
             UnselectedTabColor="#AEAEB2">
 
-    <!-- 1. Gösterge Paneli Sekmesi -->
+    <!-- 1. Gösterge Paneli-->
     <ContentPage Title="Panel" BackgroundColor="#121212">
         <ContentPage.IconImageSource>
             <FontImageSource FontFamily="OpenSansRegular" Glyph="&#xE88A;" Color="#AEAEB2"/>
@@ -16,7 +16,6 @@
             <VerticalStackLayout Spacing="15" Padding="20">
                 <Label Text="PC Performansı" FontSize="22" FontAttributes="Bold" TextColor="White" Margin="0,10"/>
                 <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto" ColumnSpacing="15" RowSpacing="15">
-                    <!-- CPU / RAM -->
                     <Frame Grid.Row="0" Grid.Column="0" CornerRadius="20" Padding="15" BackgroundColor="#1E1E1E" BorderColor="Transparent">
                         <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
                             <Label Text="CPU Kullanımı" FontSize="14" TextColor="#AEAEB2"/>
@@ -29,7 +28,6 @@
                             <Label x:Name="RamUsageLabel" Text="- GB" FontSize="28" FontAttributes="Bold" TextColor="White"/>
                         </VerticalStackLayout>
                     </Frame>
-                    <!-- Sıcaklıklar -->
                     <Frame Grid.Row="1" Grid.Column="0" CornerRadius="20" Padding="15" BackgroundColor="#1E1E1E" BorderColor="Transparent">
                         <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
                             <Label Text="CPU Sıcaklığı" FontSize="14" TextColor="#AEAEB2"/>
@@ -42,7 +40,6 @@
                             <Label x:Name="GpuTempLabel" Text="-°C" FontSize="28" FontAttributes="Bold" TextColor="White"/>
                         </VerticalStackLayout>
                     </Frame>
-                    <!-- Güç Tüketimi -->
                     <Frame Grid.Row="2" Grid.Column="0" CornerRadius="20" Padding="15" BackgroundColor="#1E1E1E" BorderColor="Transparent">
                         <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
                             <Label Text="CPU Güç" FontSize="14" TextColor="#AEAEB2"/>
@@ -55,7 +52,6 @@
                             <Label x:Name="GpuPowerLabel" Text="- W" FontSize="28" FontAttributes="Bold" TextColor="White"/>
                         </VerticalStackLayout>
                     </Frame>
-                    <!-- Ağ Hızları -->
                     <Frame Grid.Row="3" Grid.ColumnSpan="2" CornerRadius="20" Padding="20" BackgroundColor="#1E1E1E" BorderColor="Transparent">
                         <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
                             <VerticalStackLayout HorizontalOptions="Center" Spacing="5">

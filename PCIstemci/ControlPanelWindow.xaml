@@ -9,7 +9,6 @@
         WindowStartupLocation="CenterScreen"
         Background="#1C1C1E">
     <Window.Resources>
-        <!-- ... (Stiller aynı kalacak) ... -->
         <Style TargetType="TabItem">
             <Setter Property="Padding" Value="15,8"/>
             <Setter Property="Foreground" Value="#AEAEB2"/>
@@ -40,7 +39,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <!-- YENİ: Aktivite Kaydı için alan -->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
@@ -48,7 +46,6 @@
         <Label x:Name="TitleLabel" Grid.Row="0" Content="Bağlı Cihaz: -" FontSize="22" FontWeight="Bold" Foreground="White" Margin="5,0,0,10"/>
 
         <TabControl Grid.Row="1" Background="Transparent" BorderThickness="0">
-            <!-- ... (Sekmeler aynı kalacak) ... -->
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -73,7 +70,6 @@
             </TabItem>
         </TabControl>
 
-        <!-- YENİ: Aktivite Kaydı Alanı -->
         <Label Grid.Row="2" Content="Aktivite Kaydı" FontSize="18" FontWeight="Bold" Foreground="White" Margin="5,20,0,10"/>
         <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto" Background="#2C2C2E" Padding="5">
             <TextBlock x:Name="ActivityLogTextBlock" TextWrapping="Wrap" Foreground="#AEAEB2"/>
