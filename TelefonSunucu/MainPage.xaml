@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TelefonSunucu.MainPage"
+             BackgroundColor="#1C1C1E">
+
+    <Grid RowDefinitions="Auto, *, Auto" Padding="0,20,0,0">
+
+        <Label Grid.Row="0" Text="Sunucu Kontrolü" FontSize="34" FontAttributes="Bold" HorizontalOptions="Start" Margin="25,10" TextColor="White"/>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="20" Padding="20,0">
+
+                <!-- Durum Kartı -->
+                <Frame CornerRadius="20" Padding="20" BackgroundColor="#2C2C2E" BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="15">
+                        <Label x:Name="StatusLabel" Text="Sunucu başlatılmadı." FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+                        <BoxView HeightRequest="1" Color="#3A3A3C" />
+                        <Label x:Name="IpAddressLabel" Text="IP Adresi: -" FontSize="16" HorizontalOptions="Center" TextColor="#AEAEB2" />
+                        <Label x:Name="PinLabel" Text="PIN: -" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#0A84FF"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Kayıtlı Cihazlar Kartı -->
+                <Frame CornerRadius="20" Padding="20" BackgroundColor="#2C2C2E" BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Kayıtlı Cihazlar" FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                        <!-- YENİ: SelectionMode ve SelectionChanged eklendi -->
+                        <CollectionView x:Name="PairedDevicesCollectionView" 
+                                        HeightRequest="100"
+                                        SelectionMode="Single"
+                                        SelectionChanged="PairedDevicesCollectionView_SelectionChanged">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding Name}" TextColor="#AEAEB2" FontSize="16" Padding="0,5"/>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                            <CollectionView.EmptyView>
+                                <Label Text="Henüz kayıtlı cihaz yok." TextColor="#8E8E93" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </CollectionView.EmptyView>
+                        </CollectionView>
+                        <!-- YENİ: Kayıtlı cihaza bağlanma butonu -->
+                        <Button x:Name="ConnectToPairedDeviceButton" 
+                                Text="Seçili Cihaza Bağlanma İsteği Gönder" 
+                                IsEnabled="False"
+                                Clicked="ConnectToPairedDevice_Clicked"
+                                Margin="0,10,0,0"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Log Kartı -->
+                <Frame CornerRadius="20" Padding="0" BackgroundColor="#2C2C2E" BorderColor="Transparent" HeightRequest="150">
+                    <Editor x:Name="LogEditor" IsReadOnly="True" Text="Bağlantı bekleniyor..." Margin="15" TextColor="#AEAEB2" BackgroundColor="Transparent"/>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Button Grid.Row="2" x:Name="StartServerButton" Text="Sunucuyu Başlat" Clicked="OnStartServerClicked" CornerRadius="25" HeightRequest="50" FontSize="18" FontAttributes="Bold" Margin="20" VerticalOptions="End"/>
+
+    </Grid>
+</ContentPage>

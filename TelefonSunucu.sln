@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonSunucu", "TelefonSunucu\TelefonSunucu.csproj", "{A72F14C1-2576-425E-B41C-C415932A1DB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCIstemci", "PCIstemci\PCIstemci.csproj", "{82AE1390-74A8-41FD-AACC-463090D11098}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A72F14C1-2576-425E-B41C-C415932A1DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72F14C1-2576-425E-B41C-C415932A1DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72F14C1-2576-425E-B41C-C415932A1DB8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A72F14C1-2576-425E-B41C-C415932A1DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72F14C1-2576-425E-B41C-C415932A1DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72F14C1-2576-425E-B41C-C415932A1DB8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{82AE1390-74A8-41FD-AACC-463090D11098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AE1390-74A8-41FD-AACC-463090D11098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AE1390-74A8-41FD-AACC-463090D11098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AE1390-74A8-41FD-AACC-463090D11098}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F64491CA-B2C6-401C-9B88-92B13BBAE63C}
+	EndGlobalSection
+EndGlobal
